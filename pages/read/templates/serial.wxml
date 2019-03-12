@@ -1,0 +1,30 @@
+<template name="serial">
+  <view class="article" data-id="{{item.id}}" data-user-id="{{item.author.user_id}}" bindtap="viewSerialTap">
+    <view class="header">
+      <text>- STORY -</text>
+    </view>
+    <view class="title">
+      <text>{{item.title}}</text>    
+    </view>
+    <view class="author">
+      <text>{{item.author.user_name}}</text>
+    </view>
+    <view class="picture">
+      <image src="{{item.author.web_url}}" mode="aspectFill"></image>
+    </view>
+    <view class="content">
+      <text>{{item.excerpt}}</text>
+    </view>
+    <view class="footer clearfix">
+      <view class="before-time">
+        <text>{{item.maketime}}</text>
+      </view>
+      <view class="praise-share">
+        <image class="praise-image" wx:if="{{item.is_collected}}" src="/images/icon/favorite_active.png" catchtap="onCollectionTap" data-article-id="{{item.id}}"></image>
+        <image class="praise-image" wx:else src="/images/icon/favorite.png" catchtap="onCollectionTap" data-article-id="{{item.id}}"></image>
+        <image class="share-image" src="/images/icon/share.png" catchtap="onShareTap"></image> 
+      </view>
+    </view>
+  </view>
+  <view class="article-split"></view>  
+</template>

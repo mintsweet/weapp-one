@@ -1,0 +1,18 @@
+<!--pages/history/history.wxml-->
+<view class="container">
+    <view class="nav">
+        <text class="{{nav.hp? 'active': ''}}" catchtap="chooseHp">图文</text>
+        <text class="{{nav.essay? 'active': ''}}" catchtap="chooseEssay">阅读</text>
+        <text class="{{nav.serial? 'active': ''}}" catchtap="chooseSerial">连载</text>
+        <text class="{{nav.question? 'active': ''}}" catchtap="chooseQuestion">问答</text>
+        <text class="{{nav.music? 'active': ''}}" catchtap="chooseMusic">音乐</text>
+    </view>
+    <scroll-view scroll-y="true">
+        <block wx:for="{{dateList}}" wx:key="type">
+            <view class="bymonth" data-month="{{item.value}}"  data-title="{{item.title}}" catchtap="viewMonthlyTap">
+                <text class="date">{{item.title}}</text>
+                <image class="forward" src="/images/icon/forward.png"></image>
+            </view>
+        </block>
+    </scroll-view>
+</view>

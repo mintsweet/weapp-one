@@ -1,0 +1,31 @@
+<!--pages/home/detail/detail.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="time">{{detail.hp_makettime}}</text>
+    <view class="address">
+        <text class="address">对流层,{{address}}</text>    
+    </view>
+  </view>
+  <view class="picture">
+    <image class="picture-cover" src="{{detail.hp_img_url}}" mode="aspectFill"></image>
+    <image class="picture-btn" src="/images/icon/album.png" catchtap="openMaskTap"></image>
+  </view>
+  <view class="author">
+    <text>{{detail.hp_author}}</text>
+  </view>
+  <view class="content">
+    <text>{{detail.hp_content}}</text>
+  </view>
+  <view class="text-authors">
+    <text>{{detail.text_authors}}</text>
+  </view>
+  <view class="mask" wx:if="{{isMask}}">
+    <text class="mask-close" catchtap="closeMaskTap">X</text>
+    <view class="take-photo" catchtap="takePhotoTap">
+        <image src="/images/icon/camera.png"></image>
+    </view>
+    <view class="album" catchtap="openAlbumTap">
+        <image src="/images/icon/album.png"></image>
+    </view>
+  </view>
+</view>

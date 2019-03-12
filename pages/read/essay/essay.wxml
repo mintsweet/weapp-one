@@ -1,0 +1,61 @@
+<!--pages/read/essay/essay.wxml-->
+<view class="container">
+  <view class="title">
+    <text>{{essay.hp_title}}</text>    
+  </view>
+  <view class="split"></view>
+  <view class="author">
+    <text>文 / {{essay.author[0].user_name}}</text>
+  </view>
+  <view class="content">
+    <text>{{essay.hp_content}}</text>
+  </view>
+  <view class="author-introduce">
+    <text>{{essay.hp_author_introduce}}</text>
+  </view>
+  <view class="author-info" wx:if="{{showUser}}">
+      <text class="text">作者</text>    
+      <view class="split"></view>
+      <view class="author-wrapper clearfix">
+          <image src="{{essay.author[0].web_url}}" class="author-avatar"></image>
+          <view class="author-desc">
+              <text class="author-name">{{essay.author[0].user_name}}</text>
+              <text class="author-summary">{{essay.author[0].summary}}</text>
+          </view>
+          <view class="author-follow" catchtap="userFollowTap">
+              <text wx:if="{{followed}}">已关注</text>
+              <text wx:else>关注</text>
+          </view>
+      </view>      
+  </view>
+  <view class="comment">
+      <text class="text">评论列表</text>
+      <view class="split"></view>
+      <view class="comment-list">
+          <block wx:for="{{comments}}" wx:key="id">
+              <view class="comment-item">
+                  <view class="comment-header">
+                      <image class="comment-user-avatar" src="{{item.user.web_url}}"></image>
+                      <text class="comment-user-name">{{item.user.user_name}}</text>
+                      <text class="comment-date">{{item.input_date}}</text>
+                  </view>
+                  <view class="comment-main">
+                      <text>{{item.content}}</text>
+                  </view>
+                  <view class="comment-footer">
+                      <image class="comment-praise-image" src="/images/icon/praise.png"></image>
+                      <text class="comment-praise-num">{{item.praisenum}}</text>
+                  </view>
+              </view>
+          </block>
+      </view>
+  </view>
+  <view class="footer-wrapper">
+      <view class="footer-praise">
+          <image src="/images/icon/favorite.png"></image>
+      </view>
+      <view class="footer-content">
+          <text>{{essay.praisenum}} 喜欢 · {{essay.commentnum}} 评论</text>
+      </view>
+  </view>
+</view>

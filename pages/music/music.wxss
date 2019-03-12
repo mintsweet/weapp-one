@@ -1,0 +1,129 @@
+/* pages/music/music.wxss */
+.container {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #b2b2b2;    
+}
+
+.music-wrapper {
+    width: 100%;
+    padding: 0 42rpx;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    font-size: 14px;
+    color: #a9a9a9;
+}
+
+.title {
+    margin-bottom: 34rpx;
+    font-size: 20px;
+}
+
+.author {
+    padding-bottom: 34rpx;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 14px;
+    color: #a9a9a9;
+}
+
+.picture {
+    position: relative;
+    width: 100%;
+    height: 420rpx;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    text-align: center;
+}
+
+.picture image {
+    width: 400rpx;
+    height: 400rpx;
+    margin-top: 10rpx;
+    border-radius: 50%;
+}
+
+.control {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -40rpx;
+    margin-left: -40rpx;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.control image {
+    width: 60rpx;
+    height: 60rpx;
+    margin-top: 10rpx;
+    text-align: center;
+}
+
+.musci-author {
+    padding-top: 25rpx;
+    border-top: 1px solid #f2f2f2;
+    font-size: 12px;
+    color: #a6a6a6;
+}
+
+.summary {
+    margin-top: 40rpx;
+    margin-bottom: 80rpx;
+    font-size: 14px;
+    color: #808080;
+}
+
+.info {
+    width: 100%;
+    margin-bottom: 30rpx;
+    font-size: 14px;
+    color: #a6a6a6;
+}
+
+.footer {
+    width: 100%;
+    margin-bottom: 30rpx;
+    margin-top: 80rpx;
+    font-size: 14px;
+    color: #a6a6a6;
+}
+
+.before-time {
+    float: left;
+}
+
+.praise-share {
+    float: right;
+}
+
+.praise-num {
+    display: inline-block;
+    margin-right: 10rpx;
+    font-size: 14px;    
+    vertical-align: top;
+}
+
+.praise-image, .share-image {
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+}
+
+.share-image {
+    margin-left: 30rpx;
+}
+
+.article-split {
+    width: 100%;
+    height: 14rpx;
+    background-color: #eee;
+    border-top: 1px solid #e2e2e2;
+}

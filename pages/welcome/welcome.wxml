@@ -1,0 +1,8 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container" bindtap="viewTap">
+    <image src="{{avatar}}" class="avatar"></image>
+    <text class="nickname">Hello , {{nickName}}</text>
+    <view class="introduction">
+        <text>心，若没有栖息的地方，到哪里都是流浪</text>
+    </view>
+</view>

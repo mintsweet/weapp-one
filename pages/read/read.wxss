@@ -1,0 +1,107 @@
+/* pages/read/read.wxss */
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+    height: 300rpx;
+}
+
+.carousel-item {
+    position: relative;
+    height: 100%;
+}
+
+.carousel-cover {
+    width: 100%;
+    height: 100%;
+}
+
+.article {
+    width: 100%;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+    font-weight: 200;
+}
+
+.header {
+    width: 100%;
+    height: 86rpx;
+    line-height: 86rpx;
+    text-align: center;
+    font-size: 14px;
+    color: #808080;
+}
+
+.title {
+    width: 100%;
+    margin-bottom: 34rpx;
+    font-size: 20px;
+    color: #333;
+}
+
+.author {
+    width: 100%;
+    margin-bottom: 34rpx;
+    font-size: 14px;
+    color: #808080;
+}
+
+.picture {
+    width: 100%;
+    height: 448rpx;
+    margin-bottom: 34rpx;
+}
+
+.picture image {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    margin-bottom: 75rpx;
+    font-size: 14px;
+    color: #808080;
+}
+
+.footer {
+    width: 100%;
+    margin-bottom: 30rpx;
+    margin-top: 80rpx;
+    font-size: 14px;
+    color: #a6a6a6;
+}
+
+.before-time {
+    float: left;
+}
+
+.praise-share {
+    float: right;
+}
+
+.praise-num {
+    display: inline-block;
+    margin-right: 10rpx;
+    font-size: 14px;    
+    vertical-align: top;
+}
+
+.praise-image, .share-image {
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+}
+
+.share-image {
+    margin-left: 30rpx;
+}
+
+.article-split {
+    width: 100%;
+    height: 14rpx;
+    background-color: #eee;
+    border-top: 1px solid #e2e2e2;
+}

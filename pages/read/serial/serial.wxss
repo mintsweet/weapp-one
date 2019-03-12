@@ -1,0 +1,43 @@
+/* pages/read/serial/serial.wxss */
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;    
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.split {
+    width: 150rpx;
+    height: 6rpx;
+    margin-bottom: 30rpx;
+    background: #333;    
+}
+
+.author {
+    font-size: 16px;
+    color: #666;
+}
+
+.content {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.author-introduce {
+    margin: 20px 0;
+    color: #888;
+    font-size: 12px;
+}
+
+.text {
+    display: block;
+    margin-bottom: 10rpx;
+    font-size: 16px;
+    color: #333;
+}

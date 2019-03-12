@@ -1,0 +1,19 @@
+<!--pages/movie/story/story.wxml-->
+<view class="container">
+    <view class="poster">
+        <image src="{{movie.movie_detail.poster}}"></image>
+    </view>
+    <view class="title">
+        <text>{{movie.movie_detail.title}}</text>
+    </view>
+    <view class="summary">
+        <text>{{movie.summary}}</text>
+    </view>
+    <view class="info">
+        <text>{{movie.movie_detail.info}}</text>
+    </view>
+    <text class="text">—— 剧情简介 ——</text>
+    <view class="content">
+        <text>{{movie.movie_detail.officialstory}}</text>
+    </view>
+</view>

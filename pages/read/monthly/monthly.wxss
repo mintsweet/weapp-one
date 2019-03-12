@@ -1,0 +1,58 @@
+/* pages/read/monthly/monthly.wxss */
+.container {
+  width: 100%; 
+  height: 100%;
+  border-top: 1px solid #b2b2b2; 
+  font-weight: 200; 
+}
+
+.article {
+  width: calc(100% - 24rpx);
+  margin: 0 12rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header {
+  margin-top: 30rpx;
+}
+
+.title {
+  font-weight: 400;
+}
+
+.type {
+  float: right;
+  display: inline-block;
+  width: 82rpx;
+  height: 38rpx;
+  margin-top: 8rpx;
+  margin-right: 10rpx;
+  line-height: 38rpx;
+  border: 1px solid #89bdf7;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #89bdf7;
+}
+
+.author, .content{
+  margin-top: 30rpx;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+
+.content {
+  margin-bottom: 50rpx;
+}
+
+.question {
+  margin-top: 30rpx;
+  margin-bottom: 60rpx;
+}
+
+.ques-title {
+  display: inline-block;
+  width: 80%; 
+  font-weight: 600;
+}
+

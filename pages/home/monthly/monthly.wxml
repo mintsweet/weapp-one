@@ -1,0 +1,17 @@
+<!--pages/home/monthly/monthly.wxml-->
+<view class="container">
+    <block wx:for="{{monthly}}" wx:key="hpcontent_id">
+        <view class="card" data-hp-id="{{item.hpcontent_id}}" bindtap="viewDetailTap">
+            <view class="header">
+                <image class="pic-cover" src="{{item.hp_img_url}}" mode="aspectFill"></image>
+                <view class="meta">
+                    <text class="title">{{item.hp_title}}</text>
+                    <text class="date">{{item.hp_makettime}}</text>
+                </view>
+            </view>
+            <view class="desc">
+                <text class="content">{{item.hp_content}}</text>
+            </view>
+        </view>
+    </block>
+</view>

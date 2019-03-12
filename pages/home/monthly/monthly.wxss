@@ -1,0 +1,60 @@
+/* pages/home/monthly/monthly.wxss */
+.container {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    border-top: 1px solid #cccccc;
+}
+
+.card {
+    display: inline-block;
+    width: calc(50% - 24rpx);
+    height: 394rpx;
+    margin: 0 12rpx 24rpx;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    position: relative;    
+    width: 100%;
+    height: 292rpx;
+}
+
+.pic-cover {
+    width: 100%;
+    height: 100%;
+}
+
+.meta {
+    position: absolute;
+    bottom: 0;    
+    width: 100%;
+    height: 30rpx;
+    line-height: 30rpx;
+    color: #fefefe;
+    font-size: 20rpx;
+    font-weight: 200;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    margin-left: 12rpx;
+}
+
+.date {
+    float: right;
+    margin-right: 12rpx;
+}
+
+.desc {
+    padding: 5px 3px;
+}
+
+.content {
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}

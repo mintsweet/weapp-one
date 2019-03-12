@@ -1,0 +1,89 @@
+/* pages/movie/detail/detail.wxss */
+.container {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #797b6f;
+}
+
+.poster-swiper {
+    position: relative;
+    width: 100%;
+    height: 360rpx;
+}
+
+.poster-item {
+    width: 100%;
+    height: 100%;
+}
+
+.poster-item image {
+    width: 100%;
+    height: 100%;
+}
+
+.poster-current {
+    position: absolute;
+    right: 10rpx;
+    bottom: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.movie-story {
+    padding: 0 15px;
+}
+
+.movie-name {
+    width: 100%;
+    margin-top: 40rpx;
+    font-size: 14px;
+    color: #727272;
+    text-align: center;
+}
+
+.story-title {
+    width: 100%;
+    margin-top: 60rpx;
+    margin-bottom: 40rpx;
+    font-size: 20px;
+}
+
+.split {
+    width: 150rpx;
+    height: 6rpx;
+    margin-top: 20rpx;    
+    margin-bottom: 30rpx;
+    background: #333;    
+}
+
+.story-author {
+    position: relative;
+    font-size: 14px;
+    color: #333;
+}
+
+.detail-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.story-content {
+    line-height: 1.5;
+    font-size: 14px;
+    color: #363636;
+}
+
+.edt-introduce {
+    margin: 20px 0;
+    color: #888;
+    font-size: 12px;
+}
+
+.edt-introduce text {
+    display: block;
+    margin-bottom: 20px;
+}
+

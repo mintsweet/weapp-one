@@ -1,0 +1,125 @@
+/* pages/home/detail/detail.wxss */
+.container {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #b2b2b2;
+    font-weight: 200;
+}
+
+.header {
+    width: 100%;
+    height: 142rpx;
+    padding-top: 42rpx;
+    padding-bottom: 26rpx; 
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.time {
+    font-size: 20px;
+}
+
+.address {
+    color: #cccccc;
+    font-size: 12px;
+    margin-top: 12rpx;
+}
+
+.picture {
+    position: relative;
+    width: 100%;
+    height: 552rpx;
+}
+
+.picture-cover {
+    width: 100%;
+    height: 100%;
+}
+
+.picture-btn {
+    position: absolute;
+    bottom: 10rpx;
+    left: 50%;
+    margin-left: -20rpx;
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.author {
+    margin: 14rpx 0 36rpx 0;
+    font-size: 12px;
+    text-align: center;
+    color: #d1d1d1;
+}
+
+.content {
+    width: 651rpx;
+    height: 332rpx;
+    margin: 0 49rpx 32rpx;
+    padding: 40rpx 22rpx;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.text-authors {
+    text-align: center;
+    font-size: 12px;
+    color: #c7c7c7;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.mask-close {
+    position: absolute;
+    top: 15rpx;
+    right: 25rpx;
+    font-size: 28px;
+    color: #c7c7c7;
+}
+
+.take-photo {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 150rpx;    
+    margin-top: -50rpx;
+    margin-left: -50rpx;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;    
+}
+
+.take-photo image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.album {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 120rpx;
+    margin-top: -50rpx;
+    margin-right: -50rpx;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+}
+
+.album image {
+    width: 50rpx;
+    height: 50rpx;
+}

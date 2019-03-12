@@ -1,0 +1,33 @@
+<template name="hp">
+  <view class="hp-wrapper">
+    <view class="hp-time">
+      <text class="hp-time-text">{{item.hp_makettime}}</text>
+      <text class="hp-time-desc">对流层，地球</text>
+    </view>
+    <view class="hp-picture">
+      <image class="hp-picture-cover" src="{{item.hp_img_url}}" mode="aspectFill"></image>
+      <text class="hp-title">{{item.hp_title}}</text>
+    </view>
+    <view class="hp-author">
+      <text>{{item.hp_author}}</text>
+    </view>
+    <view class="hp-content">
+      <text>{{item.hp_content}}</text>
+    </view>
+    <view class="hp-text_authors">
+      <text>{{item.text_authors}}</text>
+    </view>
+    <view class="hp-btns clearfix">
+      <view class="hp-btns-left" data-hp-id="{{item.hpcontent_id}}" catchtap="viewDetailTap">
+        <image src="/images/icon/pen.png"></image>
+        <text>小记</text>
+      </view>
+      <view class="hp-btns-right">
+        <text class="hp-favorite-num">{{item.praisenum}}</text>
+        <image wx:if="{{item.is_collected}}" src="/images/icon/favorite_active.png" catchtap="onCollectionTap" data-hp-id="{{item.hpcontent_id}}"></image>
+        <image wx:else src="/images/icon/favorite.png" catchtap="onCollectionTap" data-hp-id="{{item.hpcontent_id}}"></image>
+        <image class="hp-btn-share" src="/images/icon/share.png" catchtap="onShareTap"></image> 
+      </view>
+    </view>
+  </view>
+</template>

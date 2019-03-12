@@ -1,0 +1,39 @@
+<!--pages/read/monthly/monthly.wxml-->
+<view class="container">
+    <block wx:if="{{articleType === 'essay'}}" wx:for="{{articles}}" wx:key="content_id">
+        <view class="article" data-id="{{item.content_id}}" bindtap="viewEssayTap">
+            <view class="header">
+                <text class="title">{{item.hp_title}}</text>
+                <text class="type">短篇</text>
+            </view>
+            <view class="author">
+                <text>{{item.author[0].user_name}}</text>
+            </view>
+            <view class="content">
+                <text>{{item.guide_word}}</text>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{articleType === 'serialcontent'}}" wx:for="{{articles}}" wx:key="id">
+        <view class="article" data-id="{{item.id}}" bindtap="viewSerialTap">
+            <view class="header">
+                <text class="title">{{item.title}}</text>
+                <text class="type">连载</text>
+            </view>
+            <view class="author">
+                <text>{{item.author.user_name}}</text>
+            </view>
+            <view class="content">
+                <text>{{item.excerpt}}</text>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{articleType === 'question'}}" wx:for="{{articles}}" wx:key="question_id">
+        <view class="article clearfix" data-id="{{item.question_id}}" bindtap="viewQuestionTap">
+            <view class="question">
+                <text class="ques-title">{{item.question_title}}</text>    
+                <text class="type">问答</text>                
+            </view>
+        </view>
+    </block>
+</view>

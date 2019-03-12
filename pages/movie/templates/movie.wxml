@@ -1,0 +1,34 @@
+<template name="movie">
+    <view class="movie-wrapper" data-id="{{item.movie_id}}"  data-user-id="{{item.user.user_id}}" bindtap="viewStoryDetail">
+        <view class="header">
+            <text>- 影视 -</text>
+        </view>
+        <view class="title">
+            <text>{{item.title}}</text>
+        </view>
+        <view class="author">
+            <text>文 / {{item.author_list[0].user_name}}</text>
+        </view>
+        <view class="picture">
+            <image src="{{item.movie_detail.detailcover}}" mode="aspectFill"></image>
+        </view>
+        <view class="summary">
+            <text>{{item.summary}}</text>
+            <view class="movie-title">
+                <text>—— 《{{item.movie_detail.title}}》</text>
+            </view>
+        </view>
+        <view class="footer clearfix">
+            <view class="before-time">
+                <text>{{item.input_date}}</text>
+            </view>
+            <view class="praise-share">
+                <text class="praise-num">{{item.praisenum}}</text>
+                <image class="praise-image" wx:if="{{item.is_collected}}" src="/images/icon/favorite_active.png" catchtap="onCollectionTap" data-story-id="{{item.id}}"></image>
+                <image class="praise-image" wx:else src="/images/icon/favorite.png" catchtap="onCollectionTap" data-story-id="{{item.id}}"></image>
+                <image class="share-image" src="/images/icon/share.png" catchtap="onShareTap"></image> 
+            </view>
+        </view>
+    </view>
+    <view class="article-split"></view>  
+</template>

@@ -1,0 +1,7 @@
+<!--pages/music/music.wxml-->
+<view class="container">
+    <block wx:for="{{musics}}" wx:for-index="idx" wx:key="{{id}}">
+        <import src="templates/music.wxml" />
+        <template is="music" data="{{item: item, is_play}}" />   
+    </block>
+</view>

@@ -1,0 +1,80 @@
+<!--pages/read/question/question.wxml-->
+<view class="container">
+    <view class="question-title">
+        <text>{{question.question_title}}</text>
+    </view>
+    <view class="question-content">
+        <text>{{question.question_content}}</text>
+    </view>
+    <view class="question-author">
+        <text>----{{question.asker.user_name}}问道</text>
+    </view>
+    <view class="ques-ans-split"></view>
+    <view class="answer-author">
+        <text>{{question.answerer.user_name}}答:</text>
+    </view>
+    <view class="answer-content">
+        <text>{{question.answer_content}}</text>
+    </view>
+    <view class="author-introduce">
+        <text>{{question.charge_edt}}</text>
+    </view>
+    <view class="author-info" wx:if="{{showUser}}">
+        <text class="text">回答者</text>    
+        <view class="split"></view>
+        <view class="author-wrapper clearfix">
+            <image src="{{question.answerer.web_url}}" class="author-avatar"></image>
+            <view class="author-desc">
+                <text class="author-name">{{question.answerer.user_name}} {{question.answerer.wb_name}}</text>
+                <text class="author-summary">{{question.answerer.summary}}</text>
+            </view>
+            <view class="author-follow" catchtap="userFollowTap">
+                <text wx:if="{{followed}}">已关注</text>
+                <text wx:else>关注</text>
+            </view>
+        </view>      
+    </view>
+    <view class="recommend">
+        <text class="text">推荐内容</text>
+        <view class="split"></view>
+        <view class="recommend-list">
+            <view class="recommend-item" data-id="{{recommend.question_id}}" data-user-id="{{recommend.author_list[0].user_id}}" catchtap="viewRecommendTap">
+                <text class="recommend-type">问答</text>
+                <view class="recommend-content">
+                    <text class="recommend-title">{{recommend.question_title}}</text>
+                    <text class="recommend-info">{{recommend.answerer.user_name}} 答 {{recommend.asker.user_name}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="comment">
+        <text class="text">全部评论</text>
+        <view class="split"></view>
+        <view class="comment-list">
+            <block wx:for="{{comments}}" wx:key="id">
+                <view class="comment-item">
+                    <view class="comment-header">
+                        <image class="comment-user-avatar" src="{{item.user.web_url}}"></image>
+                        <text class="comment-user-name">{{item.user.user_name}}</text>
+                        <text class="comment-date">{{item.input_date}}</text>
+                    </view>
+                    <view class="comment-main">
+                        <text>{{item.content}}</text>
+                    </view>
+                    <view class="comment-footer">
+                        <image class="comment-praise-image" src="/images/icon/praise.png"></image>
+                        <text class="comment-praise-num">{{item.praisenum}}</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="footer-wrapper">
+        <view class="footer-praise">
+            <image src="/images/icon/favorite.png"></image>
+        </view>
+        <view class="footer-content">
+            <text>{{question.praisenum}} 喜欢 · {{question.commentnum}} 评论</text>
+        </view>
+    </view>
+</view>

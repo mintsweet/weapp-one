@@ -1,0 +1,74 @@
+<!--pages/music/detail/detail.wxml-->
+<view class="container">
+    <view class="picture">
+        <view class="picture-inner">
+            <image src="{{music.cover}}"></image>    
+        </view>
+        <view class="picture-control" catchtap="togglePlayTap">
+            <image wx:if="{{is_play}}" src="/images/icon/pause.png"></image>
+            <image wx:else src="/images/icon/play.png"></image>
+        </view>
+    </view>
+    <view class="music-desc">
+        <text class="music-title">· {{music.title}} ·</text>
+        <text class="music-info">{{music.author.user_name}} | {{music.album}}</text>
+    </view>
+    <view class="title">
+        <text>{{music.story_title}}</text>
+    </view>
+    <view class="author">
+        <text>文 / {{music.story_author.user_name}}</text>
+    </view>
+    <view class="content">
+        <text>{{music.story}}</text>
+    </view>
+    <view class="edt-introduce">
+        <text>{{music.charge_edt}}</text>
+        <text>{{music.copyright}}</text>
+    </view>
+    <view class="author-info" wx:if="{{showUser}}">
+        <text class="text">作者</text>    
+        <view class="split"></view>
+        <view class="author-wrapper clearfix">
+            <image src="{{music.story_author.web_url}}" class="author-avatar"></image>
+            <view class="author-desc">
+                <text class="author-name">{{music.story_author.user_name}}</text>
+                <text class="author-summary">{{music.story_author.summary}}</text>
+            </view>
+            <view class="author-follow" catchtap="userFollowTap">
+                <text wx:if="{{followed}}">已关注</text>
+                <text wx:else>关注</text>
+            </view>
+        </view>      
+    </view>
+    <view class="comment">
+        <text class="text">全部评论</text>
+        <view class="split"></view>
+        <view class="comment-list">
+            <block wx:for="{{comments}}" wx:key="id">
+                <view class="comment-item">
+                    <view class="comment-header">
+                        <image class="comment-user-avatar" src="{{item.user.web_url}}"></image>
+                        <text class="comment-user-name">{{item.user.user_name}}</text>
+                        <text class="comment-date">{{item.input_date}}</text>
+                    </view>
+                    <view class="comment-main">
+                        <text>{{item.content}}</text>
+                    </view>
+                    <view class="comment-footer">
+                        <image class="comment-praise-image" src="/images/icon/praise.png"></image>
+                        <text class="comment-praise-num">{{item.praisenum}}</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="footer-wrapper">
+        <view class="footer-praise">
+            <image src="/images/icon/favorite.png"></image>
+        </view>
+        <view class="footer-content">
+            <text>{{music.praisenum}} 喜欢 · {{music.commentnum}} 评论</text>
+        </view>
+    </view>
+</view>

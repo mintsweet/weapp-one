@@ -1,0 +1,74 @@
+<!--pages/read/serial/serial.wxml-->
+<view class="container">
+  <view class="title">
+    <text>{{serial.title}}</text>    
+  </view>
+  <view class="split"></view>
+  <view class="author">
+    <text>文 / {{serial.author.user_name}}</text>
+  </view>
+  <view class="content">
+    <text>{{serial.content}}</text>
+  </view>
+  <view class="author-introduce">
+    <text>{{serial.charge_edt}}</text>
+  </view>
+  <view class="author-info" wx:if="{{showUser}}">
+      <text class="text">作者</text>    
+      <view class="split"></view>
+      <view class="author-wrapper clearfix">
+          <image src="{{serial.author.web_url}}" class="author-avatar"></image>
+          <view class="author-desc">
+              <text class="author-name">{{serial.author.user_name}}</text>
+              <text class="author-summary">{{serial.author.summary}}</text>
+          </view>
+          <view class="author-follow" catchtap="userFollowTap">
+              <text wx:if="{{followed}}">已关注</text>
+              <text wx:else>关注</text>
+          </view>
+      </view>      
+  </view>
+  <view class="recommend">
+    <text class="text">推荐内容</text>
+    <view class="split"></view>
+    <view class="recommend-list">
+        <view class="recommend-item" data-id="{{recommend.id}}" data-user-id="{{recommend.author.user_id}}" catchtap="viewRecommendTap">
+            <text class="recommend-type">连载</text>
+            <view class="recommend-content">
+                <text class="recommend-title">{{recommend.title}}</text>
+                <text class="recommend-info">文 / {{recommend.author.user_name}}</text>
+            </view>
+        </view>
+    </view>
+  </view>
+  <view class="comment">
+      <text class="text">全部评论</text>
+      <view class="split"></view>
+      <view class="comment-list">
+          <block wx:for="{{comments}}" wx:key="id">
+              <view class="comment-item">
+                  <view class="comment-header">
+                      <image class="comment-user-avatar" src="{{item.user.web_url}}"></image>
+                      <text class="comment-user-name">{{item.user.user_name}}</text>
+                      <text class="comment-date">{{item.input_date}}</text>
+                  </view>
+                  <view class="comment-main">
+                      <text>{{item.content}}</text>
+                  </view>
+                  <view class="comment-footer">
+                      <image class="comment-praise-image" src="/images/icon/praise.png"></image>
+                      <text class="comment-praise-num">{{item.praisenum}}</text>
+                  </view>
+              </view>
+          </block>
+      </view>
+  </view>
+  <view class="footer-wrapper">
+      <view class="footer-praise">
+          <image src="/images/icon/favorite.png"></image>
+      </view>
+      <view class="footer-content">
+          <text>{{serial.praisenum}} 喜欢 · {{serial.commentnum}} 评论</text>
+      </view>
+  </view>
+</view>

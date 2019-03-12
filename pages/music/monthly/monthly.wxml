@@ -1,0 +1,15 @@
+<!--pages/music/motnly/monthly.wxml-->
+<view class="container">
+    <block wx:for="{{musics}}" wx:key="id">
+        <view class="music-wrapper clearfix" data-id="{{item.id}}" data-user-id="{{item.author_list[0].user_id}}" bindtap="viewMusicDetail">
+            <view class="picture">
+                <image src="{{item.cover}}"></image>
+            </view>
+            <view class="desc">
+                <text class="title">{{item.title}}</text>
+                <text class="author">{{item.author.user_name}}</text>
+                <image class="forward" src="/images/icon/forward.png"></image>                
+            </view>
+        </view>
+    </block>
+</view>

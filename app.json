@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/home/home",
+    "pages/home/detail/detail",
+    "pages/home/monthly/monthly",
+    "pages/read/read",                                      
+    "pages/read/carousel/carousel",
+    "pages/read/essay/essay",
+    "pages/read/serial/serial",
+    "pages/read/question/question",
+    "pages/read/monthly/monthly",
+    "pages/music/music",                              
+    "pages/music/detail/detail",
+    "pages/music/monthly/monthly",
+    "pages/movie/movie",        
+    "pages/movie/story/story",
+    "pages/movie/detail/detail",
+    "pages/history/history"    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "听青湛",
+    "backgroundColor": "#fefefe",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#333",
+    "backgroundColor": "#f5f5f5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "Home",
+        "iconPath": "images/tab/home.png",
+        "selectedIconPath": "images/tab/home_active.png"
+      },
+      {
+        "pagePath": "pages/read/read",
+        "text": "Read",
+        "iconPath": "images/tab/read.png",
+        "selectedIconPath": "images/tab/read_active.png"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "text": "Music",
+        "iconPath": "images/tab/music.png",
+        "selectedIconPath": "images/tab/music_active.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "Movie",
+        "iconPath": "images/tab/movie.png",
+        "selectedIconPath": "images/tab/movie_active.png"
+      }
+    ]
+  }
+}
